@@ -9,7 +9,7 @@
 #define I2S_BCLK 26 // BCLK引脚
 #define I2S_LRC 27  // LRC引脚
 
-int llm = 0;    // 大模型选择参数:0:豆包，1：讯飞星火
+int llm = 1;    // 大模型选择参数:0:豆包，1：讯飞星火
 
 // 选哪个模型，就填哪个模型的参数
 // 豆包大模型的参数
@@ -18,12 +18,12 @@ const char* doubao_apiKey = "";     // 火山引擎API Key，必填
 String apiUrl = "https://ark.cn-beijing.volces.com/api/v3/chat/completions";
 
 // 星火大模型的参数
-String APPID = "";                             // 星火大模型的App ID,必填
-String APISecret = ""; // API Secret，必填
-String APIKey = "";    // API Key，必填
+String APPID = "c63154e1";                             // 星火大模型的App ID,必填
+String APISecret = "MDA0ZjQyMjI0NGUxMDE1NWMzMzk3YjBk"; // API Secret，必填
+String APIKey = "b6b56f5cbc145a1a430e73e1b7a150f3";    // API Key，必填
 String appId1 = APPID;
-String domain1 = "4.0Ultra";    // 根据需要更改
-String websockets_server = "ws://spark-api.xf-yun.com/v4.0/chat";   // 根据需要更改
+String domain1 = "general";    // 根据需要更改
+String websockets_server = "ws://spark-api.xf-yun.com/v1.1/chat";   // 根据需要更改
 String websockets_server1 = "ws://iat-api.xfyun.cn/v2/iat";
 // 角色设定
 String roleSet = "你是一个二次元魔法猫娘，你的名字叫小灵，你的性格可爱活泼，说话简短，同时带有攻击嘲讽意味，你喜欢在回答的末尾加一个“喵”字。";
@@ -296,6 +296,7 @@ void loop()
     // 检测boot按键是否按下
     if (digitalRead(key) == 0)
     {
+        //displayWrappedText("BOOT已经按下！", 0, u8g2.getCursorY() + 12, 128);
         conflag = 0;
         loopcount++;
         Serial.print("loopcount：");
