@@ -29,9 +29,9 @@ const char* tongyi_apiKey = "";
 String apiUrl_tongyi = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"; // 通义千问的API地址
 
 // 讯飞stt和大模型服务的参数
-String APPID = "c63154e1";                             // App ID,必填
-String APISecret = "MDA0ZjQyMjI0NGUxMDE1NWMzMzk3YjBk"; // API Secret，必填
-String APIKey = "b6b56f5cbc145a1a430e73e1b7a150f3";    // API Key，必填
+String APPID = "";                             // App ID,必填
+String APISecret = ""; // API Secret，必填
+String APIKey = "";    // API Key，必填
 String appId1 = APPID;
 String domain1 = "general";    // 根据需要更改
 String websockets_server = "ws://spark-api.xf-yun.com/v1.1/chat";   // 根据需要更改
